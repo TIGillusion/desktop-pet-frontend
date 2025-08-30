@@ -1,0 +1,42 @@
+# Live2D Desktop API 包清单文件
+# 指定打包时包含的文件
+
+# 包含所有 Python 文件
+include *.py
+
+# 包含配置和依赖文件
+include requirements.txt
+include requirements-dev.txt
+include setup.py
+
+# 包含文档文件
+include README.md
+include 使用说明.md
+include api_usage_examples.md
+
+# 包含脚本文件
+include *.bat
+include *.sh
+
+# 包含模型目录（但不包含具体模型文件，避免版权问题）
+graft models
+prune models/*
+
+# 包含工具目录
+graft utils
+
+# 排除不需要的文件
+exclude .env
+exclude .env.*
+global-exclude __pycache__
+global-exclude *.py[cod]
+global-exclude *.so
+global-exclude .DS_Store
+global-exclude Thumbs.db
+
+# 排除虚拟环境和临时文件
+prune venv
+prune temp
+prune .git
+prune .vscode
+prune .idea

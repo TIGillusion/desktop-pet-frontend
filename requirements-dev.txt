@@ -1,0 +1,28 @@
+# Live2D Desktop API 开发环境依赖
+# 包含所有开发和调试工具
+
+# 引入生产依赖
+-r requirements.txt
+
+# ========== 开发和调试工具 ==========
+# 单元测试框架
+pytest>=7.4.0
+pytest-cov>=4.1.0        # 代码覆盖率
+
+# 代码质量工具
+black>=23.0.0             # 代码格式化
+flake8>=6.0.0            # 代码检查
+isort>=5.12.0            # 导入排序
+
+# 类型检查
+mypy>=1.5.0              # 静态类型检查
+
+# 开发工具
+ipython>=8.0.0           # 增强的Python交互式shell
+jupyter>=1.0.0           # Jupyter notebook
+
+# 性能分析
+psutil>=5.9.0            # 系统和进程监控
+
+# 调试工具
+pdb++>=0.10.3            # 增强的调试器
